@@ -223,7 +223,7 @@ export default {
           font-family: "Gilroy";
           font-size: 27px;
           font-style: normal;
-          font-weight: 500;
+          font-weight: 600;
           line-height: 34px; /* 125.926% */
           margin-bottom: 15px;
 
@@ -322,7 +322,7 @@ export default {
           font-family: "Gilroy";
           font-size: 22px;
           font-style: normal;
-          font-weight: 500;
+          font-weight: 600;
           line-height: 131.818%;
           margin-bottom: 5px;
 

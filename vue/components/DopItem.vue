@@ -5,11 +5,11 @@
         <div class="dop-img">
           <picture>
             <source
-              :srcset="'/build/images/dops/' + dop.img + '.webp'"
+              :srcset="'build/images/dops/' + dop.img + '.webp'"
               type="image/webp"
             />
             <img
-              :src="'/build/images/dops/' + dop.img + '.png'"
+              :src="'build/images/dops/' + dop.img + '.png'"
               :alt="dop.name"
             />
           </picture>

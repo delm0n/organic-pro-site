@@ -129,7 +129,7 @@ export default {
     }
 
     @mixin benefit-bg($type) {
-      background: url("/build/images/benefit/benefit-bg." + $type) no-repeat;
+      background: url("../images/benefit/benefit-bg." + $type) no-repeat;
       background-size: cover;
       background-position: center;
     }

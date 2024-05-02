@@ -71,7 +71,7 @@ export default {
   },
   computed: {
     sorce() {
-      return "/build/images/" + this.floder + "/" + this.imgName;
+      return "build/images/" + this.floder + "/" + this.imgName;
     },
   },
 };
