@@ -166,10 +166,6 @@ export default {
   overflow: hidden;
   padding: 100px 20px;
 
-  .container {
-    padding: 0;
-  }
-
   .set-clock {
     margin-top: 20px;
 

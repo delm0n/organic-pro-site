@@ -22,7 +22,7 @@
         </p>
         <div class="content-offer">
           <div class="price">
-            <p class="old" v-html="dop.oldPrice + ' РУБ.'"></p>
+            <p class="old" v-html="dop.oldPrice.toLocaleString() + ' РУБ.'"></p>
             <div class="discont">
               {{
                 "-" +
@@ -30,7 +30,7 @@
                 "%"
               }}
             </div>
-            <p class="new" v-html="dop.price + ' РУБ.'"></p>
+            <p class="new" v-html="dop.price.toLocaleString() + ' РУБ.'"></p>
           </div>
           <div class="buttons-block">
             <button

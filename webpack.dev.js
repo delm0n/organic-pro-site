@@ -7,15 +7,15 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./new-site-vue/vue/main/main.js",
-    // dostavka: "./new-site-vue/vue/dostavka/dostavka.js",
-    // opt: "./new-site-vue/vue/opt/opt.js",
+    main: "./vue/main/main.js",
+    // dostavka: "./vue/dostavka/dostavka.js",
+    // opt: "./vue/opt/opt.js",
   },
-  // entry: "./new-site-vue/vue/main/main.js",
+  // entry: "./vue/main/main.js",
   devtool: "source-map",
   output: {
     filename: "[name].min.js",
-    path: path.resolve(__dirname, "./new-site-vue/build/"),
+    path: path.resolve(__dirname, "./build/"),
     clean: true,
   },
   resolve: {
@@ -81,7 +81,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "./new-site-vue/images",
+          from: "./images",
           to: "./images/[path][name].webp",
           toType: "template",
           globOptions: {
@@ -92,7 +92,7 @@ module.exports = {
         },
 
         {
-          from: "./new-site-vue/images",
+          from: "./images",
           to: "./images",
           globOptions: {
             copyUnmodified: true,

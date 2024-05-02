@@ -212,7 +212,9 @@ export default {
 #made {
   overflow: hidden;
   @extend %padd;
-  background: #f9f9f9;
+
+  padding-bottom: 0;
+  // background: #f9f9f9;
 
   .made-wrapper {
     position: relative;

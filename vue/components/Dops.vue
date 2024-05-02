@@ -314,6 +314,10 @@ export default {
           color: #fff;
           background: #323232;
         }
+
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
 

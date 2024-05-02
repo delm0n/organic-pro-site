@@ -104,30 +104,34 @@ import OrderCheckbox from "../UI/OrderCheckbox.vue";
 import MyImage from "../UI/MyImage.vue";
 
 export default {
-  data() {
-    return {
-      columns: [
+  components: { OrderCheckbox, MyImage },
+  computed: {
+    ...mapGetters([
+      "getModules",
+      "getPriceOrder",
+      "getOldPriceOrder",
+      "getOrganicCube",
+      "getOrganicColonna",
+    ]),
+
+    columns() {
+      return [
         {
           type: MODULETYPES.colonna,
           title: "Колонна с 8-ступенчатой вставкой",
           img: "colonna-icon",
-
-          price: 5444,
-          oldPrice: 6666,
+          price: this.getOrganicColonna.price,
+          oldPrice: this.getOrganicColonna.price,
         },
         {
           type: MODULETYPES.bak,
           title: "Перегонный куб на 15 литров",
           img: "bak-icon",
-          price: 4444,
-          oldPrice: 5666,
+          price: this.getOrganicCube.price,
+          oldPrice: this.getOrganicCube.oldPrice,
         },
-      ],
-    };
-  },
-  components: { OrderCheckbox, MyImage },
-  computed: {
-    ...mapGetters(["getModules", "getPriceOrder", "getOldPriceOrder"]),
+      ];
+    },
 
     getModulesImg() {
       return this.getModules.filter((el) => el.imgOrder);
@@ -217,8 +221,8 @@ export default {
         }
 
         .ten-kit {
-          width: 51%;
-          left: 10px;
+          width: 35%;
+          left: 0;
           bottom: 0;
         }
 
@@ -235,10 +239,17 @@ export default {
           z-index: 4;
         }
 
-        .add15l-kit {
+        .add20l-kit {
           width: 35%;
           bottom: 16.5%;
           right: 0;
+          z-index: 3;
+        }
+
+        .silicon_prok-kit {
+          width: 30%;
+          right: 36%;
+          bottom: 0;
           z-index: 3;
         }
       }

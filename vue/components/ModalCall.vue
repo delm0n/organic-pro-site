@@ -1,6 +1,6 @@
 <template>
   <div id="modal-call" style="display: none">
-    <form action="sendCall.php" method="post" class="spnForm">
+    <form action="" v-on:submit.prevent method="post" class="spnForm">
       <h3>Заказать обратный звонок</h3>
 
       <div class="form-call__inputs">

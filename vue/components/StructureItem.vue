@@ -20,7 +20,7 @@
               :alt="'#'"
               :floder="'structure'"
               :imgName="img"
-              :mobile="false"
+              :mobile="577"
             />
           </div>
         </div>
@@ -129,7 +129,7 @@ export default {
     margin: 0 auto;
   }
 
-  &:nth-child(2n) {
+  &:nth-child(2n + 1) {
     @media (min-width: 769px) {
       flex-direction: row-reverse;
     }
@@ -173,6 +173,14 @@ export default {
 
       @media (max-width: 1199px) {
         display: none;
+      }
+
+      span {
+        color: #c8ac6c;
+        font-family: "Gilroy";
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29px;
       }
     }
 

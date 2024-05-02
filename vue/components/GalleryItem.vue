@@ -2,15 +2,15 @@
   <div class="photo-wrapper">
     <div v-if="!getMobile" class="photo-grid">
       <a
-        v-for="(photo, index) in photoList"
-        :key="index"
+        v-for="(photo, idx) in photoList"
+        :key="idx"
         class="photo-grid__item"
         :href="
           'build/images/photo/' +
           photo.href +
           (getWebp === 'webp' ? '.webp' : '.png')
         "
-        data-fancybox="gallery"
+        :data-fancybox="'gallery-' + index"
       >
         <picture>
           <source
@@ -28,18 +28,14 @@
 
     <div v-if="getMobile" :class="'photo-slider photo-slider-' + index">
       <div class="swiper-wrapper">
-        <div
-          v-for="(slide, index) in photoList"
-          :key="index"
-          class="swiper-slide"
-        >
+        <div v-for="(slide, idx) in photoList" :key="idx" class="swiper-slide">
           <a
             :href="
               'build/images/photo/' +
               slide.href +
               (getWebp === 'webp' ? '.webp' : '.png')
             "
-            data-fancybox="gallery"
+            :data-fancybox="'gallery-' + index"
             class="photo-wrapper__img"
           >
             <picture>
@@ -112,18 +108,13 @@ export default {
     const photoSwiperbreakpoint = window.matchMedia("(min-width: 769px)");
     const breakpointChecker = () => {
       if (!photoSwiperbreakpoint.matches) {
-        // this.mobile = false;
         setTimeout(() => {
           return photoSwiper();
         }, 20);
       } else {
-        // this.mobile = true;
-
-        setTimeout(() => {
-          if (myPhotoSwiper) {
-            return myPhotoSwiper.destroy(true, true);
-          }
-        }, 10);
+        if (myPhotoSwiper) {
+          return myPhotoSwiper.destroy(true, true);
+        }
       }
     };
 
@@ -163,8 +154,7 @@ export default {
     &__item {
       display: block;
       border-radius: 10px;
-      // border: 2px solid #b9b9b9;
-      background: #e6e6e6;
+      background: #f5f5f5;
       overflow: hidden;
       width: 100%;
       cursor: zoom-in;

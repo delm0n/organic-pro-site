@@ -65,15 +65,14 @@ export default {
     const photoSwiperbreakpoint = window.matchMedia("(min-width: 769px)");
     const breakpointChecker = () => {
       if (!photoSwiperbreakpoint.matches) {
+        console.log(1);
         setTimeout(() => {
           return photoSwiper();
         }, 20);
       } else {
-        setTimeout(() => {
-          if (myPhotoSwiper) {
-            return myPhotoSwiper.destroy(true, true);
-          }
-        }, 10);
+        if (myPhotoSwiper) {
+          return myPhotoSwiper.destroy(true, true);
+        }
       }
     };
 

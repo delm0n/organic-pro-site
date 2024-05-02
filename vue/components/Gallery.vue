@@ -45,32 +45,32 @@ export default {
           load: false,
           photoList: [
             {
-              href: "photo-1__modal",
-              src: "photo-1",
+              href: "photo-1-1__modal",
+              src: "photo-1-1",
               asprat: "1/1",
             },
 
             {
-              href: "photo-2__modal",
-              src: "photo-2",
+              href: "photo-1-2__modal",
+              src: "photo-1-2",
               asprat: "1/1",
             },
 
             {
-              href: "photo-3__modal",
-              src: "photo-3",
+              href: "photo-1-3__modal",
+              src: "photo-1-3",
               asprat: "1/1",
             },
 
             {
-              href: "photo-4__modal",
-              src: "photo-4",
+              href: "photo-1-4__modal",
+              src: "photo-1-4",
               asprat: "439/205",
             },
 
             {
-              href: "photo-5__modal",
-              src: "photo-5",
+              href: "photo-1-5__modal",
+              src: "photo-1-5",
               asprat: "1/1",
             },
           ],
@@ -81,30 +81,30 @@ export default {
           title: "Дистилляция",
           photoList: [
             {
-              href: "photo-1__modal",
-              src: "photo-1",
+              href: "photo-2-1__modal",
+              src: "photo-2-1",
               asprat: "1/1",
             },
             {
-              href: "photo-3__modal",
-              src: "photo-3",
+              href: "photo-2-3__modal",
+              src: "photo-2-3",
               asprat: "1/1",
             },
             {
-              href: "photo-2__modal",
-              src: "photo-2",
+              href: "photo-2-2__modal",
+              src: "photo-2-2",
               asprat: "1/1",
             },
 
             {
-              href: "photo-4__modal",
-              src: "photo-4",
+              href: "photo-2-4__modal",
+              src: "photo-2-4",
               asprat: "439/205",
             },
 
             {
-              href: "photo-5__modal",
-              src: "photo-5",
+              href: "photo-2-5__modal",
+              src: "photo-2-5",
               asprat: "1/1",
             },
           ],
@@ -116,31 +116,31 @@ export default {
           title: "Ректификация",
           photoList: [
             {
-              href: "photo-1__modal",
-              src: "photo-1",
+              href: "photo-3-1__modal",
+              src: "photo-3-1",
               asprat: "1/1",
             },
             {
-              href: "photo-5__modal",
-              src: "photo-5",
-              asprat: "1/1",
-            },
-
-            {
-              href: "photo-3__modal",
-              src: "photo-3",
+              href: "photo-3-5__modal",
+              src: "photo-3-5",
               asprat: "1/1",
             },
 
             {
-              href: "photo-4__modal",
-              src: "photo-4",
+              href: "photo-3-3__modal",
+              src: "photo-3-3",
+              asprat: "1/1",
+            },
+
+            {
+              href: "photo-3-4__modal",
+              src: "photo-3-4",
               asprat: "439/205",
             },
 
             {
-              href: "photo-2__modal",
-              src: "photo-2",
+              href: "photo-3-2__modal",
+              src: "photo-3-2",
               asprat: "1/1",
             },
           ],
@@ -208,6 +208,12 @@ export default {
 #gallery {
   @extend %padd;
   overflow: hidden;
+
+  picture {
+    display: flex;
+    justify-content: center;
+  }
+
   .gallery-toggle {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

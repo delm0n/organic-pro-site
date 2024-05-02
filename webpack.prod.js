@@ -7,18 +7,17 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
   mode: "production",
   entry: {
-    main: "./new-site-vue/vue/main/main.js",
-    // dostavka: "./new-site-vue/vue/dostavka/dostavka.js",
-    // opt: "./new-site-vue/vue/opt/opt.js",
+    main: "./vue/main/main.js",
+    // dostavka: "./vue/dostavka/dostavka.js",
+    // opt: "./vue/opt/opt.js",
   },
   output: {
     filename: "[name].min.js",
-    path: path.resolve(__dirname, "./new-site-vue/build/"),
+    path: path.resolve(__dirname, "./build/"),
     clean: true,
   },
   resolve: {
@@ -118,7 +117,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "./new-site-vue/images",
+          from: "./images",
           to: "./images",
         },
       ],
@@ -136,10 +135,6 @@ module.exports = {
       detailedLogs: false,
       silent: false,
       strict: true,
-    }),
-    new webpack.DefinePlugin({
-      // Drop Options API from bundle
-      __VUE_PROD_DEVTOOLS__: false,
     }),
   ],
 };

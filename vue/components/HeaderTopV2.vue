@@ -253,10 +253,10 @@ export default {
       font-weight: 200;
       line-height: 21px;
       opacity: 1;
-      width: 130px;
+      // width: 130px;
       transition: width 0.4s, opacity 0.2s;
       overflow: hidden;
-      will-change: width;
+      // will-change: width;
 
       @media (max-width: 1580px) and (min-width: 1367px) {
         display: none;

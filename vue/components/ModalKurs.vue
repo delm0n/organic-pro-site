@@ -11,7 +11,12 @@
         />
       </div>
       <div class="modal-wrapper__text">
-        <form action="sendOrder.php" method="post" class="spnForm form-order">
+        <form
+          action=""
+          v-on:submit.prevent
+          method="post"
+          class="spnForm form-order"
+        >
           <div class="user-info">
             <input
               class="my-input"

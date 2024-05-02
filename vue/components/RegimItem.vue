@@ -3,15 +3,16 @@
     <div class="regim-item__img">
       <div class="label-container">
         <div class="label label-g" v-html="item.gradus"></div>
-        <div class="label label-l" v-html="item.litr"></div>
+        <!-- <div class="label label-l" v-html="item.litr"></div> -->
       </div>
 
       <my-image
         :alt="item.title"
         :floder="'regim'"
         :imgName="item.img"
-        :media="1137"
+        :mobile="false"
       />
+      <!--  :media="1137" -->
     </div>
 
     <div class="regim-item__content">
@@ -226,6 +227,11 @@ export default {
     @media (max-width: 992px) {
       margin-bottom: 15px;
       @include fluidFontSize(16, 18, 768, 1024);
+    }
+
+    span {
+      font-weight: 600;
+      color: #c8ac6c;
     }
   }
 

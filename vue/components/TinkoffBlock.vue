@@ -89,6 +89,12 @@ export default {
         gap: 20px;
       }
 
+      .img-wrap {
+        @include aspect() {
+          aspect-ratio: 128/114;
+        }
+      }
+
       .title-box {
         h2 {
           color: #323232;

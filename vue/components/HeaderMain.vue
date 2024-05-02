@@ -114,8 +114,8 @@
             ></div>
           </div>
           <div class="offer-buttons">
-            <button class="button">Заказать</button>
-            <button class="button button-tinkoff">
+            <button class="button" @click="toOrder()">Заказать</button>
+            <button class="button button-tinkoff" @click="toOrder()">
               <my-image
                 class="tinkoff-icon"
                 :alt="'#'"
@@ -159,6 +159,14 @@ export default {
     };
   },
   computed: mapGetters(["getMobile", "getMainFirst"]),
+  methods: {
+    toOrder() {
+      this.gsap.to(window, {
+        duration: 1.5,
+        scrollTo: { y: "#order" },
+      });
+    },
+  },
 };
 </script>
 

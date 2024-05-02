@@ -90,7 +90,7 @@
               <p>ИТОГО: {{ getLastPrice.toLocaleString() + " руб." }}</p>
             </div>
 
-            <form action="sendOrder.php" method="post" class="spnForm">
+            <form action="" v-on:submit.prevent method="post" class="spnForm">
               <div class="cart-input">
                 <input
                   class="my-input"
